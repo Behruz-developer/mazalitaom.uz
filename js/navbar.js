@@ -28,4 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
     cancelBtn.addEventListener('click', closeMenuOnly);
+
+
+    const navbar = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) { // 50 piksel skroll qilinganda
+      navbar.classList.add('scrolled-nav');
+    } else {
+      navbar.classList.remove('scrolled-nav');
+    }});
   });
